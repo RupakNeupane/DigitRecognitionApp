@@ -25,7 +25,7 @@ def main(image_path, model_path):
 if __name__ == "__main__":
     # Example usage
     image_path = (
-        "./data/testSample/img_300.jpg"  # Path to the image you want to predict
+        "./data/testSample/img_304.jpg"  # Path to the image you want to predict
     )
 
     model_path = os.path.join(

@@ -41,7 +41,6 @@ def train(n_epoch, train_dataloader, test_dataloader, model, criterion, optimize
         for images, label in tqdm(
             train_dataloader, desc=f"Training {epoch} of {n_epoch}"
         ):
-            images = images.view(-1, 28 * 28)
             loss = train_batch(images, label, model, criterion, optimizer)
             epoch_train_loss += loss.item()
         epoch_train_loss /= len(train_dataloader)
@@ -49,7 +48,6 @@ def train(n_epoch, train_dataloader, test_dataloader, model, criterion, optimize
 
         # validation
         for images, label in tqdm(test_dataloader, desc="validation"):
-            images = images.view(-1, 28 * 28)
             loss = validation_batch(images, label, model, criterion)
             epoch_test_loss += loss.item()
         epoch_test_loss /= len(test_dataloader)
@@ -93,10 +91,11 @@ def preprocess_image(image: Image.Image):
 
 
 def predict_digit(model, image_tensor):
-    device = "cuda" if torch.cuda.is_available() else "cpu"
     model.eval()
     with torch.no_grad():
-        image_tensor = image_tensor.view(-1, 28 * 28).to(device)
+        # Add a batch dimension
+        image_tensor = image_tensor.unsqueeze(0)
+        # Forward pass
         output = model(image_tensor)
         _, predicted = torch.max(output.data, 1)
     return predicted.item()

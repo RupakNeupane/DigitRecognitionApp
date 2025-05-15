@@ -74,7 +74,8 @@ async def predict_from_image(file: UploadFile = File(...)):
         # Make prediction
         prediction = predict_digit(model, processed_image)
 
-        return prediction
+        response = {"prediction": prediction}
+        return response
     except Exception as e:
         logger.error(f"Error processing prediction: {e}")
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
@@ -106,7 +107,8 @@ async def predict_from_base64(data: dict):
         # Make prediction
         prediction = predict_digit(model, processed_image)
 
-        return prediction
+        response = {"prediction": prediction}
+        return response
     except Exception as e:
         logger.error(f"Error processing base64 prediction: {e}")
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")

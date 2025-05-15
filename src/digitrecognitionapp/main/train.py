@@ -28,7 +28,7 @@ def main():
     test_dataloader = DataLoader(
         test_dataset, batch_size=configuration["batch_size"], shuffle=False
     )
-    model = NeuralNet(28 * 28, 500, 10).to(device)
+    model = NeuralNet(500, 10).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=configuration["learning_rate"])
     train_loss, test_loss = train(

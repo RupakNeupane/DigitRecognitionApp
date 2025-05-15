@@ -4,6 +4,6 @@
 configuration = {
     "batch_size": 128,
     "n_epoch": 10,
-    "learning_rate": 0.001,
+    "learning_rate": 1e-4,
     "saved_path": "version_1",
 }
