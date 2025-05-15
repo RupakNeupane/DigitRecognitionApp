@@ -47,7 +47,7 @@ async def root():
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
-    if model.loaded:
+    if model is not None:
         return {"status": "healthy", "model_loaded": True}
     return JSONResponse(
         status_code=503, content={"status": "unhealthy", "model_loaded": False}
