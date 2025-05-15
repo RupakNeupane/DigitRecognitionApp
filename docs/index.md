@@ -8,10 +8,7 @@ The MNIST Digit Predictor API is built using FastAPI and offers several endpoint
 
 ## Getting Started
 
-To get started with the MNIST Digit Predictor API, check out the following sections:
-
-- [Installation](getting-started/installation.md): Instructions on how to install the necessary dependencies and set up your environment.
-- [Quickstart Guide](getting-started/quickstart.md): A quick start guide to help you get the API up and running with minimal setup.
+To get started with the MNIST Digit Predictor API, [Quickstart Guide](getting-started/quickstart.md): A quick start guide to help you get the API up and running with minimal setup.
 
 ## API Documentation
 

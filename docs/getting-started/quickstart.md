@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/mnist-digit-predictor-api.git
+   git clone https://github.com/RupakNeupane/DigitRecognitionApp/
    cd mnist-digit-predictor-api
    ```
 
@@ -31,6 +31,14 @@ Before you begin, ensure you have the following installed:
    pip install -r requirements.txt
    ```
 
+### Training Model
+
+1. **Train Model**
+   Train the model to fit mnist dataset:
+   ```bash
+   python -m src.digitrecognitionapp.main.train
+   ```
+
 ## Running the API
 
 1. **Set the environment variables:**
@@ -38,7 +46,7 @@ Before you begin, ensure you have the following installed:
    You need to set the `MODEL_PATH` and `PORT` environment variables. You can do this in your terminal:
 
    ```bash
-   export MODEL_PATH="path/to/your/model.pth"
+   export MODEL_PATH="./dump/version_1/model.pth"
    export PORT=8000  # Optional, defaults to 8000
    ```
 
@@ -48,6 +56,10 @@ Before you begin, ensure you have the following installed:
 
    ```bash
    uvicorn demo.app:app --host 0.0.0.0 --port $PORT --reload
+   ```
+   OR
+   ```bash
+   python -m demo.app
    ```
 
 3. **Access the API:**

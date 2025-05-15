@@ -52,8 +52,7 @@ This document outlines the various API endpoints available in the MNIST Digit Pr
   - **Content**:
     ```json
     {
-      "prediction": <predicted_digit>,
-      "confidence": <confidence_score>
+      "prediction": <predicted_digit>
     }
     ```
   - **Status Code**: 500 Internal Server Error
@@ -77,8 +76,7 @@ This document outlines the various API endpoints available in the MNIST Digit Pr
   - **Content**:
     ```json
     {
-      "prediction": <predicted_digit>,
-      "confidence": <confidence_score>
+      "prediction": <predicted_digit>
     }
     ```
   - **Status Code**: 400 Bad Request

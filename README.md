@@ -10,7 +10,7 @@ The MNIST Digit Predictor API is a FastAPI-based backend service designed for pr
 
 ## Getting Started
 
-To get started with the MNIST Digit Predictor API, please refer to the [installation guide](docs/getting-started/installation.md) and the [quick start guide](docs/getting-started/quickstart.md).
+To get started with the MNIST Digit Predictor API, please refer to the [quick start guide](docs/getting-started/quickstart.md).
 
 ## Documentation
 

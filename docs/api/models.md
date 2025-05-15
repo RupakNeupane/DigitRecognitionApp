@@ -33,10 +33,6 @@ The response model for the prediction endpoint is defined as follows:
   - Type: Integer
   - Description: The predicted digit (0-9).
 
-- **confidence**: `float`
-  - Type: Float
-  - Description: The confidence score of the prediction, ranging from 0 to 1.
-
 ### Health Check Response Model
 
 The response model for the health check endpoint is defined as follows:
