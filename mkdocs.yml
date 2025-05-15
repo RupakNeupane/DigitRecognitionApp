@@ -1,0 +1,23 @@
+site_name: MNIST Digit Predictor API
+site_description: Documentation for the MNIST Digit Predictor API
+repo_url: https://github.com/RupakNeupane/DigitRecognitionApp
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+  - API Reference:
+    - Endpoints: api/endpoints.md
+    - Models: api/models.md
+  - Reference:
+    - Configuration: reference/configuration.md
+
+plugins:
+  - search
